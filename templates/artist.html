@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>
+    {% for track in data %}
+        <li>{{ track }}</li>
+    {% endfor %}
+</p>
+{% endblock %}
