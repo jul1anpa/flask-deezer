@@ -3,13 +3,13 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/home", methods=["GET", "POST"])
-def go_home():
+@app.route("/search", methods=["GET", "POST"])
+def search_bar():
     if request.method == "POST":
         artist = request.form["artist"]
         return get_artist(artist)
     else:
-        return render_template("home.html")
+        return render_template("search_bar.html")
 
 @app.route("/artist/<artist>", methods=["GET"])
 def get_artist(artist):
